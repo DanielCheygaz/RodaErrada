@@ -1,5 +1,5 @@
 package Classes.Windows;
-
+import Classes.DataStructure.*;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -16,10 +16,16 @@ public class MainWindow extends JFrame{
         pack();
 
         this.carsButton.addActionListener(this::carsButtonPerformed);
+        this.bikesButton.addActionListener(this::bikesButtonPerformed);
     }
 
     private void carsButtonPerformed(ActionEvent e){
-        new CarsManagerWindow().setVisible(true);
+        VehicleManagerWindow<Car> vehicleManagerWindow = new VehicleManagerWindow<Car>(Car.class);
+        vehicleManagerWindow.setVisible(true);
+    }
+
+    private void bikesButtonPerformed(ActionEvent e){
+        new VehicleManagerWindow<Bike>(Bike.class).setVisible(true);
     }
 
     public static void main(String[] args){
