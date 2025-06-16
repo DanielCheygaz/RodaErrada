@@ -18,8 +18,8 @@ public class VehicleAddWindow<TVehicle extends Vehicle> extends JFrame{
     private JTextField textField2;
     private JButton addModelButton;
     private JTextField textField3;
-    private JTextField textField4;
     private JButton cancelButton;
+    private JTextArea textArea1;
     private VehicleManagerWindow previousWindow;
     private DefaultTableModel manufacturersTableModel;
     private DefaultTableModel modelsTableModel;
